@@ -4,6 +4,7 @@
         {% block head %}
             <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
             <link rel="stylesheet" href="/assets/css/main.css" />
+            <meta charset="utf-8" />
             <title>{% block title %}{{ 'title.welcome'|translate }}{% endblock %} - Bendcamp</title>
         {% endblock %}
     </head>
@@ -61,7 +62,7 @@
         </div>
         <footer>
             {% block footer %}
-                ♡ Copying is an act of love. Love is not subject to law.
+                ♡ Made with <a href="http://bendcamp.org">Bendcamp</a>.<br>Copying is an act of love. Love is not subject to law.
             {% endblock %}
         </footer>
         {% block script %}

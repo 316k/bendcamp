@@ -1,0 +1,13 @@
+{% extends 'template' %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block title %}{{ 'title.index'|translate }}{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="col-md-12 jumbotron">
+        <h1>Hay</h1>
+    </div>
+{% endblock %}
