@@ -1,0 +1,18 @@
+Icon?
+.DS_Store
+.svn
+code_coverage
+*~
+*.swp
+coverage
+kohana_release
+nbproject
+build
+composer.lock
+composer.phar
+vendor/*
+
+### Kohana ###
+application/cache/*
+application/logs/*
+application/config/database.php
