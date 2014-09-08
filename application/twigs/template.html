@@ -30,6 +30,7 @@
                                 <ul class="nav navbar-nav">
                                     <li><a href="#"><i class="glyphicon glyphicon-plus"></i> Add an album</a></li>
                                     <li><a href="#"><i class="glyphicon glyphicon-plus"></i> Add a track</a></li>
+                                    <li><a href="#"><i class="glyphicon glyphicon-stats"></i> Stats</a></li>
                                     <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Parameters</a></li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
@@ -53,11 +54,15 @@
                     </nav>
                 {% endif %}
             {% endblock %}
-            {% block content %}
-                <header class="header col-md-12">
-                    <h1>Bendcamp <small>{{ 'site.slogan'|translate }}</small></h1>
-                </header>
-            {% endblock %}
+            <div class="col-md-10 col-md-offset-1">
+                {% block content %}
+                    {% block header %}
+                    <header class="header">
+                        <img class="img-responsive" src="/assets/img/logo-transparent.png" />
+                    </header>
+                    {% endblock %}
+                {% endblock %}
+            </div>
             <div class="sticky-footer-push"></div>
         </div>
         <footer>

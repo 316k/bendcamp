@@ -1,3 +1,12 @@
 /**
  * Additionnal custom styles go here.
  */
+
+body {
+    background-color: #00516F;
+    color: #050505;
+}
+
+a, a:hover, a:active {
+    color: #8FA8FF;
+}

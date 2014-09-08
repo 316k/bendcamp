@@ -1,5 +1,23 @@
 @import url('custom.css');
 
+header.header {
+    padding: 0;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.album-thumb {
+    padding: 1%;
+    width: 25%;
+    float: left;
+}
+
+.album-thumb img {
+    width: 100%;
+}
+
 /* Sticky Footer */
 /* See http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
 html, body {
@@ -18,5 +36,6 @@ footer, .sticky-footer-push {
 }
 
 footer {
+    clear: both;
     text-align: center;
 }
