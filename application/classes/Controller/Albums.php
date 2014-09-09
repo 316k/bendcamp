@@ -7,4 +7,7 @@ class Controller_Albums extends Controller_Template {
 
     public function action_index() {
     }
+
+    public function action_listen() {
+    }
 }

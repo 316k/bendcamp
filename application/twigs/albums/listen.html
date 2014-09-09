@@ -1,0 +1,28 @@
+{% extends 'template' %}
+
+{% block title %}{{ 'title.album'|translate }}{% endblock %}
+
+{% set album = 'My super album' %}
+
+{% block content %}
+<h1>{{ album }} </h1>
+    <h4>by The Oods</h4>
+    <div class="col-md-6">
+        <div>
+            <audio controls></audio>
+        </div>
+        <div>
+            <button class="btn btn-lg">
+                Buy the digital album
+            </button>
+        </div>
+        <ul class="list-unstyled">
+            <li>Track 1</li>
+            <li>Track 2</li>
+            <li>Track 3</li>
+        <ul>
+    </div>
+    <div class="col-md-6">
+        <img class="img-responsive" src="/assets/thumbs/album1.png" />
+    </div>
+{% endblock %}

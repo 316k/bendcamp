@@ -9,13 +9,19 @@ header.header {
 }
 
 .album-thumb {
-    padding: 1%;
-    width: 25%;
-    float: left;
+    padding: 1.5%;
 }
 
 .album-thumb img {
     width: 100%;
+}
+
+.discography div {
+    padding: 3%;
+}
+
+.img-center {
+    margin: auto;
 }
 
 /* Sticky Footer */

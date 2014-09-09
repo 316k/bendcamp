@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="sticky-footer-wrapper">
-            {% block navigation %}
+            {% block admin_navigation %}
                 {% if auth.logged('admin') %}
                     <nav class="navbar navbar-default" role="navigation">
                         <div class="container-fluid">
@@ -55,13 +55,49 @@
                 {% endif %}
             {% endblock %}
             <div class="col-md-10 col-md-offset-1">
-                {% block content %}
-                    {% block header %}
+                {% block header %}
                     <header class="header">
                         <img class="img-responsive" src="/assets/img/logo-transparent.png" />
                     </header>
-                    {% endblock %}
                 {% endblock %}
+                <div class="col-xs-12 col-md-10">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+                <div class="col-xs-12 col-md-2" style="padding: 0.5%;">
+                    {% block sidebar %}
+                        <div class="col-xs-12 col-sm-4 col-md-12 text-center">
+                            <h4 class="text-left">Marx Music Management</h4>
+                            <img class="img-responsive img-center" src="/assets/thumbs/artist1.png">
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-12">
+                            <p class="artist-description">
+                                Welcome to our Label's online store, where you can buy and listen to
+                                all of our artists' latest albums !
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><a href="#!">Twitter</a></li>
+                                <li><a href="#!">Facebook</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 discography">
+                            <h4>Discography</h4>
+                            {% for i in range(1, 4) %}
+                                <div class="col-xs-6 col-md-12">
+                                    <a href="/albums/my-super-album">
+                                        <img class="img-responsive" src="/assets/thumbs/album1.png" />
+                                    </a>
+                                    <p class="title">
+                                        <a href="/albums/my-super-album">
+                                            My super album
+                                        </a>
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endblock %}
+                </div>
             </div>
             <div class="sticky-footer-push"></div>
         </div>
@@ -73,6 +109,8 @@
         {% block script %}
             <script src="/assets/js/jquery-1.11.1.min.js"></script>
             <script src="/assets/js/bootstrap.min.js"></script>
+            <script src="/assets/js/readmore.min.js"></script>
+            <script src="/assets/js/ready.js"></script>
         {% endblock %}
     </body>
 </html>

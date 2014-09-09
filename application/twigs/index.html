@@ -1,33 +1,35 @@
 {% extends 'template' %}
+{% set album = {"title": "My super album", "artist": "The Oods"} %}
 
 {% block head %}
     {{ parent() }}
+    <style>
+        .discography {
+            // display: none;
+        }
+    </style>
 {% endblock %}
 {% block title %}{{ 'title.index'|translate }}{% endblock %}
 
 {% block content %}
-    {{ parent() }}
-    <div class="row">
-        {% set album = {"title": "My super album", "artist": "The Oods"} %}
-        {% for i in range(1, 9) %}
-            <div class="album-thumb">
+    {% for i in range(1, 9) %}
+        <div class="col-md-3 album-thumb">
+            <a href="/albums/my-super-album">
+                <img src="/assets/thumbs/album1.png" />
+            </a>
+            <p class="title">
                 <a href="/albums/my-super-album">
-                    <img src="/assets/thumbs/album1.png"/>
+                    {{ album.title }}
                 </a>
-                <p class="title">
-                    <a href="/albums/my-super-album">
-                        {{ album.title }}
+            </p>
+            {# If artists > 1 #}
+                <p class="artist">
+                    By 
+                    <a href="/artists/the-oods">
+                        <i>{{ album.artist }}</i>
                     </a>
                 </p>
-                {# If artists > 1 #}
-                    <p class="artist">
-                        By 
-                        <a href="/artists/the-oods">
-                            <i>{{ album.artist }}</i>
-                        </a>
-                    </p>
-                {# endif #}
-            </div>
-        {% endfor %}
-    </div>
+            {# endif #}
+        </div>
+    {% endfor %}
 {% endblock %}
