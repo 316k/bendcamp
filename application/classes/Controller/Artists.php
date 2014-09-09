@@ -9,6 +9,6 @@ class Controller_Artists extends Controller_Template {
         // If artists > 1
             // List of artists
         // Else
-            // Redirect to /
+            // Redirect to Controller_Albums->action_index()
     }
 }
